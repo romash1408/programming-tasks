@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int *find_element(int *i, int *end, int find)
 {
@@ -11,9 +12,9 @@ int *find_element(int *i, int *end, int find)
 
 int main()
 {
-	size_t n;
+	int n;
 	printf("Enter array size: ");
-	scanf("%zu", &n);
+	scanf("%d", &n);
 	
 	int *arr = malloc(n * sizeof(*arr));
 	if(!arr)
@@ -39,7 +40,7 @@ int main()
 	}
 	else
 	{
-		*found ^= 1 << (sizeof(*found) * 8 - 1);
+		*found = (*found ^ (-1)) + 1;
 	}
 	
 	printf("\nResult:");
