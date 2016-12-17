@@ -77,7 +77,7 @@ int main()
 				line_string_add_point(lstrings[n], points[m]);
 				break;
 			case 'a':
-				lstrings[lstringCount++].points = 0;
+				lstrings[lstringCount++].size = 0;
 				break;
 			case '0':
 				continue;
@@ -115,7 +115,7 @@ int main()
 				polygon_add_line_string(polygons[n], lstrings[m]);
 				break;
 			case 'a':
-				polygons[polygonCount++].lstrings = 0;
+				polygons[polygonCount++].size = 0;
 				break;
 			case '0':
 				continue;
