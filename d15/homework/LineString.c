@@ -19,6 +19,6 @@ char* line_string_print(const LineString ls, char* str)
 
 void line_string_add_point(LineString *ls, const Point pt)
 {
-  if(ls.size == LS_MAX_POINTS) return ;
-  ls.points[ls.size++] = {pt.x, pt.y};
+  if(ls->size == LS_MAX_POINTS) return ;
+  ls->points[ls->size++] = {pt.x, pt.y};
 }
