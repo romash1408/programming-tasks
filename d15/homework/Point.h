@@ -8,7 +8,7 @@ typedef struct
 	int x, y;
 } Point;
 
-char* point_print_coordinates(Point p, char* str);
-char* point_print(Point p, char* str);
+char* point_print_coordinates(Point pt, char* str);
+char* point_print(Point pt, char* str);
 
 #endif /*POINT_H/*
