@@ -4,7 +4,10 @@
 #include <stdio.h>
 #include "LineString.h"
 
-static const PL_MAX_LSTRINGS = 10;
+enum
+{
+	PL_MAX_LSTRINGS = 10
+};
 
 typedef struct
 {
@@ -18,4 +21,4 @@ char* polygon_print(const Polygon pl, char* str);
 
 void polygon_add_line_string(Polygon *pl, const LineString ls);
 
-#endif LINESTRING_H
+#endif /*LINESTRING_H*/

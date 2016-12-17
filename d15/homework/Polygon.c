@@ -2,12 +2,13 @@
 
 char* polygon_print_coordinates(const Polygon pl, char* str)
 {
-  for(int i = 0; i < pl.size; ++i)
-  {
-    if(i > 0) str += sprintf(str, "), ");
-    str += sprintf(str, ")");
-    str = line-string_print_coordinates(pl.lstrings[i], str);
-  }
+	if(!pl.size) return str;
+	str = line_string_print_coordinates(pl.lstrings[0], str);
+	for(int i = 1; i < pl.size; ++i)
+	{
+		str += sprintf(str, "), (");
+		str = line_string_print_coordinates(pl.lstrings[i], str);
+	}
 	return str;
 }
 	

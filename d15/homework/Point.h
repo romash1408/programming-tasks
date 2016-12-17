@@ -11,4 +11,4 @@ typedef struct
 char* point_print_coordinates(const Point pt, char* str);
 char* point_print(const Point pt, char* str);
 
-#endif /*POINT_H/*
+#endif /*POINT_H*/
