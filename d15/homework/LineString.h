@@ -9,7 +9,7 @@ static const LS_MAX_POINTS = 100;
 typedef struct
 {
 	int size;
-	Point points[MAX_POINTS];
+	Point points[LS_MAX_POINTS];
 } LineString;
 
 char* line_string_print_coordinates(const LineString ls, char* str);
