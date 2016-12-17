@@ -13,7 +13,7 @@ char* line_string_print_coordinates(const LineString ls, char* str)
 char* line_string_print(const LineString ls, char* str)
 {
 	str += sprintf(str, "LINESTRING (");
-	str = line_string_print_coordinates(p, str);
+	str = line_string_print_coordinates(ls, str);
 	return str + sprintf(str, ")");
 }
 
